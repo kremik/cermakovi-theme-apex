@@ -19,23 +19,11 @@
       <link href="http://postach.io/static/themes/_assets/fontawesome/css/font-awesome-ie7.min.css" rel="stylesheet">
     <![endif]-->
 
-    <!--
+
     <style>
-      /**
-       * Your custom override CSS goes here. If you wanted to override the default link colour and hover state, you would do this:
-       *
-       *  a {
-       *      color: #333; /* Override the default colour with a not-quite-black that is easy on the eyes on white screens */
-       *  }
-       *
-       *  a:hover {
-       *      color: #545454; /* This will now change the hover state as well */
-       *  }
-       *
-       *  You can put anything you want to override in here, so be creative!
-       */
+		h1.custom-site-name { font-size: 2em;}
     </style>
-    -->
+
 
     {% if site.analytics %}
     <script>
@@ -57,7 +45,26 @@
 		<div style="padding-top: 32px; text-align: center;" class="login">
 			<strong style="font-size: 2.05em">Čermákovi - Rodinný blog</strong><br />
 			Heslo je křestní jméno naší maminky (malými písmeny)
+			<form method="post" action="/login">
+					<input type="password" name="password" class="input-password" placeholder="Vložte heslo:" />
+				    <div>
+				      <input type="submit" value="Přihlásit" class="input-submit" />
+				    </div>
+			</form>
 		</div>
+		
+
+  <form method="post" action="/login">
+    <p>This web site requires a password to view, please enter it below to continue.</p>
+    <div>
+      <input type="password" name="password" class="input-password" placeholder="Enter Password:" />
+      
+    </div>
+    <div>
+      <input type="submit" value="Login" class="input-submit" />
+    </div>
+    <p class="login-copyright">&copy; Čermákovi. Powered by <a href="http://postach.io" target="_blank">Postach.io</a>.</p>          
+  </form>		
 				  
 				  
       {{ login_form }}
@@ -113,7 +120,7 @@
           <img class="avatar" src="{{ site.avatar }}" alt="{{ site.author }}" width="100%" height="100%" />
         </a -->
         <div class="site-description">
-          <h1>{{ site.name }}</h1>
+          <h1 class="custom-site-name">{{ site.name }}</h1>
 		  <ul>
           <li><a href="/">Blog</a></li>
           <li><a href="/tag/alex">Alex</a></li>
