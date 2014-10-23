@@ -146,7 +146,7 @@
             </div>
             <div class="post-info">
               <div class="info-left">
-                <p class="date">{{ post.created_at }}</p>
+                <p class="date">{{ post.created_at.strftime('%d. %m. %Y') }}</p>
               </div>
               <div class="info-right">
                 <p class="read-more"><a href="{{ post.permalink }}">Přečíst celý článek &raquo;</a></p>
