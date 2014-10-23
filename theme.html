@@ -9,7 +9,7 @@
       {% elif post %}{{ post.title }}
       {% endif %}
       | {{ site.name }}
-    ---- testovaci title plus</title>
+    </title>
 
     {{ header_meta }}
 
@@ -128,7 +128,7 @@
       <div class="span6 offset1 posts">
 
           {% if is_tag %}
-          <h4 class="sub-heading span6">Showing all posts tagged {{ tag }}:</h4>
+          <h4 class="sub-heading span6">Zobrazuji všechny příspěvky se štítkem {{ tag }}:</h4>
           {% endif %}
 
           {% if posts %}
@@ -154,12 +154,12 @@
           {% endfor %}
           {% if not is_tag %}
           <div class="pagination span6">
-            {% if pagination.prev %}<a href="{{ pagination.prev }}" class="post-prev">&larr; View Previous Posts</a>{% endif %}
-            {% if pagination.next %}<a href="{{ pagination.next }}" class="post-next">View More Posts &rarr;</a>{% endif %}
+            {% if pagination.prev %}<a href="{{ pagination.prev }}" class="post-prev">&larr; Zobrazit předchozí příspěvky</a>{% endif %}
+            {% if pagination.next %}<a href="{{ pagination.next }}" class="post-next">Zobrazit více příspěvků &rarr;</a>{% endif %}
           </div>
           {% endif %}
           {% else %}
-          <h4 class="sub-heading span6">No Posts Yet :(</h4>
+          <h4 class="sub-heading span6">Prozatím žádné příspěvky :(</h4>
           {% endif %}
       </div>
 
@@ -198,7 +198,7 @@
             {% endif %}
           </div>
           <div class="post-footer">
-            <p class="back"><a href="/">&laquo; Go Back</a></p>
+            <p class="back"><a href="/">&laquo; Zpět</a></p>
           </div>
           {% if site.disqus %}
           <div class="post-comments">
@@ -226,7 +226,7 @@
             {{ page.content }}
           </div>
           <div class="post-footer">
-            <p class="back"><a href="/">&laquo; Go Back</a></p>
+            <p class="back"><a href="/">&laquo; Zpět</a></p>
           </div>
         </div>
       </div>
